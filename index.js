@@ -130,7 +130,9 @@ const question = require("./lib.js");
 
 const main = async () => {
     try{
-        
+        const name = await question("What's your name? ");
+      console.log("Hello", name + "!");
+      process.exit(0);
     }catch(error){
         console.error(error);
         process.exit(1);
